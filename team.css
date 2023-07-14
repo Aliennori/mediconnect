@@ -42,6 +42,12 @@ header{
     padding: 2em;
     
 }
+.hamburger{
+    display: none;
+}
+.mobile-flex{
+    display: none;
+}
 .logo{
     font-family:'Cinzel Decorative', cursive;
     font-weight: 700;
@@ -293,6 +299,60 @@ footer  nav ul{
     }
 }
 @media (max-width:768px){
+    .hamburger,
+    .mobile-flex{
+        display: block;
+
+    }
+    
+    .header-button{
+        display:none;
+    }
+    .mobile-flex{
+        opacity:0
+    }
+    .mobile-flex.active{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        margin: 20px 0 70px 0;
+        opacity: 1;
+    }
+    .sidenav{
+       height: 0%;
+
+    }
+    
+    header nav ul{
+        opacity: 0;
+        display: none;
+    }
+    header nav ul.active{
+        opacity: 1;
+        display: block;
+        text-align: left;
+        margin-left: 120px;
+
+    }
+    .sidenav.active{
+        height: 100%;
+        background-color: #333;
+        color: var(--silver);
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+
+    }
+    .sidenav ul li a:hover{
+        color: var(--sky-blue);
+    }
+    .sidenav ul li{
+        margin-top: 30px;
+    }
+    .close{
+        height: 30%;
+    }
     .hero,
     .function,
     .testimonial-card{
@@ -340,7 +400,7 @@ footer  nav ul{
 /*----------aboutpage---------*/
 .about-header,
 .about-footer{
-    background-color: #333;
+    background-color: var(--sky-blue);
     color: var(--silver);
 }
 .about-nav nav ul{
