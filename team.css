@@ -40,8 +40,30 @@ ul{
 }
 header{
     padding: 2em;
+}
+.index-header{
+    background-image: url(" images/hero img.jpg");
+    background-repeat: no-repeat;  
+    background-size: cover; 
+    background-position: center; 
+    height: 100vh;
+    position: relative;
+    color: var(--white);
+    
+    
+       
     
 }
+.hero-back{
+    background-color: rgba(10, 10, 10, 0.5);
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    padding: 2em;
+}
+
 .hamburger{
     display: none;
 }
@@ -52,6 +74,7 @@ header{
     font-family:'Cinzel Decorative', cursive;
     font-weight: 700;
     font-size: 1.33em;
+
     
 }
 .fixed-header,
@@ -59,6 +82,7 @@ header{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    
 }
 
 .header-flex{
@@ -82,12 +106,10 @@ nav ul li a:hover{
     font-weight: 600;
     
 }
-.hero{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 60%;  
-
+.hero{   
+    padding: 2em;
+    position: absolute;
+    top: 30%;
     
 }
 .left,
@@ -100,24 +122,36 @@ nav ul li a:hover{
     height: 100%;
     border-radius: 5px;
 }
-.hero .left{
-    padding-top: 2em;
-}
-.hero .right{
-    padding: 2em;
-}
-.hero .right .build{
+
+.hero .build{
     margin: 20px 0 10px 0;
-    background-color: var(--sky-blue);
+    background-color: var(--orange);
 }
-.hero .right p{
-    margin-bottom: 20px;
-    font-weight: 600;
+.hero h2{
+    font-size: 3em;
+    letter-spacing: 0.12rem;
+    margin-bottom: 30px;
+}
+.hero p{
+    margin-bottom: 20px;  
+   
+    font-size: 2em;
     
 }
 .bld{
-    color: var(--sky-blue);
+    color: var(--orange);
     font-weight: 700;
+}
+.btn-1{
+    margin: 3em 0 0 5em;
+   
+}
+.index-header button{
+    background-color: var(--orange);
+}
+.index-header button:hover{
+    background-color: var(--white);
+    
 }
 button{
     font-family: inherit;
@@ -286,6 +320,15 @@ footer  nav ul{
     
 }
 @media (max-width:1024px){
+    .hero{
+        top: 20%;
+    }
+    .hero h2{
+        font-size: 2em;
+    }
+    .hero p{
+        font-size: 1.5em;
+    }
     .manage,
     .function-container{
         width: 50%;
@@ -303,6 +346,35 @@ footer  nav ul{
     .mobile-flex{
         display: block;
 
+    }
+    .hero{
+        padding: 1em;
+        opacity:1;
+    }
+    .hero h2,
+    .hero p{
+        margin-bottom: 20px;
+    }
+    .hero p{
+        font-size: 1em;
+    }
+    .btn-1{
+        margin: 20px 0 0 0;
+    }
+    .hero.active{
+        opacity:0;
+    }
+    .hero-back{
+        padding: 0;
+    }
+    
+    .logo{
+        margin-left: 1em;
+        font-size: 1em;
+
+    }
+    .hamburger{
+        margin-right: 1em;
     }
     
     .header-button{
@@ -353,7 +425,7 @@ footer  nav ul{
     .close{
         height: 30%;
     }
-    .hero,
+    
     .function,
     .testimonial-card{
         flex-direction: column;
@@ -393,6 +465,24 @@ footer  nav ul{
     }
     .nav-two{
         margin-left: 0;
+    }
+    .header-flex{
+        margin-top: 0;
+    }
+    
+    .hero-back{
+        padding: 0;
+    }
+    .hero{
+        top: 10%;
+    }
+    .logo{
+        margin-left: 1em;
+        font-size: 1em;
+
+    }
+    .hamburger{
+        margin-right: 1em;
     }
 }
 
@@ -792,14 +882,20 @@ footer  nav ul{
     background-image: url("images/hiring-1.avif");
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: 100%;
+    background-position: center;
     color: var(--silver);
-    height: 500px;
+    height: 100vh;
+    position: relative;
     
 }
 .works-hero{
-    margin-top: 40px;
+    position: absolute;
+    top: 40%;
     
+}
+.works-hero button{
+    margin: 1em 0 0 3em;
+
 }
 .works-hero button:hover{
     background-color: var(--silver);
@@ -886,7 +982,7 @@ justify-content: space-between;
     margin-top: 20px;
 }
 .started-client{
-    background-color: #333;
+    background-color: var(--white);
     color: var(--darker-silver);
     padding: 2em;
 }
